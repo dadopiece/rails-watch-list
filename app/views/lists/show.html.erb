@@ -1,0 +1,11 @@
+<h1>hello from show list</h1>
+
+<% @list.bookmarks.each do |bookmark| %>
+  <div>
+  <%= bookmark.movie.title %>
+  <%= link_to "x", bookmark_path(bookmark), data: {turbo_method: "delete", turbo_confirm: 'Are you sure?'}%>
+
+  </div>
+<% end %>
+
+<%= link_to "+ADD A MOVIE", new_list_bookmark_path(@list) %>
