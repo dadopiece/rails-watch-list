@@ -21,7 +21,7 @@
   Movie.destroy_all
   List.destroy_all
 
-  
+
   # URL du endpoint
   url = 'https://tmdb.lewagon.com/movie/top_rated'
   # Lecture des données JSON depuis l'URL
@@ -49,8 +49,3 @@
   puts "#{movies.size} films créés avec succès."
   puts Movie.all
 
-  15.times do
-    List.create(
-      name: Faker::Quote.singular_siegler
-    )
-  end
