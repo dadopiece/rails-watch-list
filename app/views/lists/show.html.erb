@@ -1,7 +1,7 @@
 <h1>hello from show list</h1>
 <h1>Hello from  </h1>
 
-  <ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush">
 <% @list.bookmarks.each do |bookmark| %>
 <div class="card" style="width: 18rem;">
 
@@ -9,7 +9,7 @@
   <%= bookmark.movie.poster_url %>
   <%= link_to "x", bookmark_path(bookmark), data: {turbo_method: "delete", turbo_confirm: 'Are you sure?'}%>
 
-  <img src=<%= bookmark.movie.title %> class="card-img-top" alt="...">
+  <img src=<%= bookmark.movie.poster_url %> class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"><li class="list-group-item">  <%= link_to "#{list.name}", list_path(list) %></h5>
   </div>
