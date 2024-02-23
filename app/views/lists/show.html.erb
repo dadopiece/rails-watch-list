@@ -1,5 +1,22 @@
 <h1>Hello from show list</h1>
 
+<h1>
+Your list :<%= @list.name %>
+</h1>
+
+<div class="card d-inline-flex p-2">
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+</div>
+<p> ------------------------------------------------------ </p>
+
+
+<div class="card-category"
+  style="url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>')"
+>
+  <p></p>
+</div>
+
+
 <% @list.bookmarks.each do |bookmark| %>
   <div class="card d-inline-flex p-2" style="width: 18rem;">
   <img src= <%= bookmark.movie.poster_url %> class="card-img-top" >
