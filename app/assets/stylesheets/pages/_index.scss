@@ -1,2 +1,9 @@
 // Import page-specific CSS files here.
 @import "home";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;700");
+
+body {
+  background-image: url("https://64.media.tumblr.com/2457adba37c20e9fdc1d745831c96635/a2adcaf3fb0582e0-3a/s540x810/59fcbb6ce83e144a3d81276bdda13d416d9754f0.gifv");
+  background-size: cover
+}

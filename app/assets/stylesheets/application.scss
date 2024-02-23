@@ -10,3 +10,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(114, 73, 160);
+}
+
+h1 {
+  color: rgb(19, 51, 3);
+}

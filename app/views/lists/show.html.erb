@@ -1,31 +1,21 @@
-<h1>hello from show list</h1>
-<h1>Hello from  </h1>
+<h1>Hello from show list</h1>
 
-<ul class="list-group list-group-flush">
 <% @list.bookmarks.each do |bookmark| %>
-<div class="card" style="width: 18rem;">
-
-    </li>
-  <%= bookmark.movie.poster_url %>
-  <%= link_to "x", bookmark_path(bookmark), data: {turbo_method: "delete", turbo_confirm: 'Are you sure?'}%>
-
-  <img src=<%= bookmark.movie.poster_url %> class="card-img-top" alt="...">
+  <div class="card d-inline-flex p-2" style="width: 18rem;">
+  <img src= <%= bookmark.movie.poster_url %> class="card-img-top" >
   <div class="card-body">
-    <h5 class="card-title"><li class="list-group-item">  <%= link_to "#{list.name}", list_path(list) %></h5>
+    <h5 class="card-title"><li class="list-group-item"> <%= bookmark.movie.title %> </h5>
+    <p> <%= bookmark.movie.overview %></p>
   </div>
 
+  <%= link_to "(x)", bookmark_path(bookmark), data: {turbo_method: "delete", turbo_confirm: 'Are you sure?'}%>
+  </div>
 <% end %>
 
-<% end %>
-  </ul>
 
 
-
-</div>
-
-
-
-
-
+<div class="alert alert-success" role="alert">
 <%= link_to "🔙GO BACK ", lists_path %> |
 <%= link_to "+ADD A MOVIE", new_list_bookmark_path(@list) %> |
+
+</div>

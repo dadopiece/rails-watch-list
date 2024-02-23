@@ -1,21 +1,14 @@
-HI list index
-<div class="alert alert-info" role="alert">
-  <%= link_to "+CREATE A NEW LIST 🤓 ", new_list_path %>
+<h1>HI list index</h1>
+<div>
+  <% @lists.each do |list| %>
+    <div class= "card d-inline-flex p-2">
+      <li class="list-group-item ">
+        <h5 ><%= link_to "#{list.name}", list_path(list) %></h5>
+      </li>
+    </div>
+  <% end %>
 </div>
 
-  <% @lists.each do |list| %>
-
-<div class="card" style="width: 18rem;">
-
-  <img src="https://assets.palmspringslife.com/wp-content/uploads/2017/01/15094845/popcorn.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><li class="list-group-item">  <%= link_to "#{list.name}", list_path(list) %></h5>
-  </div>
-
-  <ul class="list-group list-group-flush">
-
-    </li>
-<% end %>
-  </ul>
-
+<div class="alert alert-success" role="alert">
+  <%= link_to "+CREATE A NEW LIST 🤓 ", new_list_path %>
 </div>

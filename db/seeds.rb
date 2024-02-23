@@ -1,4 +1,4 @@
-# require 'faker'
+require 'faker'
 # Movie.destroy_all
 
 #.times do
@@ -48,4 +48,3 @@
 
   puts "#{movies.size} films créés avec succès."
   puts Movie.all
-
