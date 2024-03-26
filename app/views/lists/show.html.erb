@@ -21,7 +21,10 @@ Your list :<%= @list.name %>
     <h5 class="card-title"><li class="list-group-item"> <%= bookmark.movie.title %> </h5>
     <p> <%= bookmark.movie.overview %></p>
   </div>
-
+  <h6>your comment :</h6>
+    <div class="comment">
+      <%= bookmark.comment %>
+    </div>
   <%= link_to "(x)", bookmark_path(bookmark), data: {turbo_method: "delete", turbo_confirm: 'Are you sure?'}%>
   </div>
 <% end %>
